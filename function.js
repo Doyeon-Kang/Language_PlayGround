@@ -159,7 +159,7 @@ function calculate(command, a, b) {
             return a / b;
             break;
         default:
-            return 'error!'
+            throw Error('unknown command');
     }
 }
 
