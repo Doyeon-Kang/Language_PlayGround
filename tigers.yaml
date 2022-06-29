@@ -1,8 +1,10 @@
 team: Tigers
 
-manager: Donald, George
+manager: Donald, George 
 
 members:
 - Linda
 - William
 - David
+
+coach: Grace
