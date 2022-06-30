@@ -1,41 +1,41 @@
 <template>
-  <!-- Camelcase 표기법이 아닌 경우 ''따옴표를 사용하여 표시 -->
-  <h1 :class="{ active: isActive, 'text-danger': hasError }" @click='activate'>Hello!{{ isActive }}</h1>
-  
-  <!-- 인라인으로 표시 안 하고 객체를 직접 바인딩 할 수 있음 -->
-  <h2 :class="classObject" :style="{color, fontSize}" @click="changeStyle">Bye!</h2>
-  
-  <!-- 배열을 이용하여 여러 데이터를 클래스로 바인딩 할 수 있음 -->
-  <h3 :class="[activeClass, errorClass]">Nice!</h3>
+  <button @click="handler">Click me!</button>
+  <ul>
+    <li v-for="{ id, name } in newFruits" :key="id">
+      {{ name }}-{{ id + 1 }}
+    </li>
+  </ul>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
-      isActive: false,
-      hasError: true,
-      classObject: {
-        active: true, 
-        'text-danger': false
-      },
-      activeClass: 'active',
-      errorClass: 'text-danger',
-      color: 'orange',
-      fontSize: '30px'
+      fruits: ['Apple', 'Banana', 'Cherry']
     }
   },
+  computed: {
+    newFruits() {
+      // map 함수: callback 함수를 실행한 결과를 가지고 새로운 배열을 만들 때 사용한다.
+      // 즉, 특정 배열 안에 있는 모든 데이터에 function을 실행하고 function에서 나온 값을 저장해서 새로운 배열을 만든다.
+      return this.fruits.map((fruit, index) => {
+        return {
+          id: index,
+          name: fruit
+        }
+      })
+    }
+  }, 
   methods: {
-    activate() {
-      this.isActive = true
-    },
-    changeStyle() {
-      this.color = 'red'
+    handler() {
+      this.fruits.push('Orange')
     }
   }
 }
 </script>
 
 <style scoped>
+  ul {
+    list-style: none;
+  }
 </style>
