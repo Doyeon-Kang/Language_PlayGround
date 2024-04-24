@@ -1,0 +1,53 @@
+{
+  "type": "network",
+  "version": "1.0",
+  "data": "data.json",
+  "logo": {
+    "file": "",
+    "link": "",
+    "text": "강도연"
+  },
+  "text": {
+    "more": "\u003ch3\u003e 드라마 ‘18어게인’ 1화 중 나타난 인물 간 관계 시각화\u003c/h3\u003e\n\n\u003cp\u003e\n[데이터 정보]\n출처: 드라마 ‘18어게인’ 1화 내용\nNode Size: Betweenness Centrality (사이, 매개 중심성)\nNode Color: Modularity Class (Partition)\n\u003c/p\u003e\n\n\u003cp\u003e\n[데이터 구축 기준]\n: 드라마를 직접 시청하며 한 인물이 다른인물에게 말을 거는 횟수 혹은 해당 인물을 주시하며 독백하는 횟수를 기준으로 하여 관계 데이터를 구축하였다\n\u003c/p\u003e",
+    "intro": "드라마 ‘18 어게인’ 1화 중 나타나는 인물 간 관계도를 시각화하여 작중 주요 인물과 이를 중심으로 한 인물 간 관계를 파악할 수 있습니다.",
+    "title": "18어게인 1화 중 인물 관계도"
+  },
+  "legend": {
+    "edgeLabel": "언급량",
+    "colorLabel": "어른 학생 구분",
+    "nodeLabel": "18어게인 인물"
+  },
+  "features": {
+    "search": true,
+    "groupSelectorAttribute": "Group",
+    "hoverBehavior": "dim"
+  },
+  "informationPanel": {
+    "groupByEdgeDirection": true,
+    "imageAttribute": false
+  },
+  "sigma": {
+    "drawingProperties": {
+      "defaultEdgeType": "curve",
+      "defaultHoverLabelBGColor": "#002147",
+      "defaultLabelBGColor": "#ddd",
+      "activeFontStyle": "bold",
+      "defaultLabelColor": "#000",
+      "labelThreshold": 10,
+      "defaultLabelHoverColor": "#fff",
+      "fontStyle": "bold",
+      "hoverFontStyle": "bold",
+      "defaultLabelSize": 14
+    },
+    "graphProperties": {
+      "maxEdgeSize": 0.5,
+      "minEdgeSize": 0.2,
+      "minNodeSize": 1,
+      "maxNodeSize": 7
+    },
+    "mouseProperties": {
+      "maxRatio": 20,
+      "minRatio": 0.75
+    }
+  }
+}
